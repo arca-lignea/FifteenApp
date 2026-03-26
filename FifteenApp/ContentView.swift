@@ -21,14 +21,42 @@ struct ContentView: View {
                 // 2. Use a NavigationLink to the destination view
                 
                 NavigationLink(destination: AddSubjectView()) {
-                    Text("Add")
+                    Text("Add Subject")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
                 NavigationLink(destination: ViewSubjects()) {
-                    Text("View all")
+                    Text("View Subjects")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                NavigationLink(destination: CoolVisualEffectsView()) {
+                    Text("Cool Visual Effects")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                NavigationLink(destination: InteractiveTouchEffectsView()) {
+                    Text("Interactive Touch Effects")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                NavigationLink(destination: MetalVisualEffectsView()) {
+                    Text("Metal Effects")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                NavigationLink(destination: TouchMetalVisualEffectsView()) {
+                    Text("Metal Touch Effects")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)

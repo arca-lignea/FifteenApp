@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MetalKit
 
 @main
 struct FifteenAppApp: App {

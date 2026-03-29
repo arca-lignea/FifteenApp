@@ -34,34 +34,23 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
-                NavigationLink(destination: CoolVisualEffectsView()) {
-                    Text("Cool Visual Effects")
+
+                NavigationLink(destination: WebBrowserView2()) {
+                    Text("Web Browser")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
-                NavigationLink(destination: InteractiveTouchEffectsView()) {
-                    Text("Interactive Touch Effects")
+                
+                NavigationLink(destination: PhotoGalleryView()) {
+                    Text("Images")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
-                NavigationLink(destination: MetalVisualEffectsView()) {
-                    Text("Metal Effects")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
-                NavigationLink(destination: TouchMetalVisualEffectsView()) {
-                    Text("Metal Touch Effects")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
+
                 Spacer()
                 NavigationLink(destination: DeleteAll()) {
                     Text("Remove All")
@@ -303,6 +292,6 @@ struct JapaneseView : View {
 
 
 
-#Preview {
-    ViewSubject(name: "blah", id: UUID(), detail: "deets")
-}
+//#Preview {
+ //   ViewSubject(name: "blah", id: UUID(), detail: "deets")
+//}

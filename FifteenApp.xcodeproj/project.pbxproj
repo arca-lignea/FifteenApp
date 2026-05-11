@@ -16,6 +16,7 @@
 		E41831B52EFBD90700FF8C42 /* FifteenAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41831B42EFBD90700FF8C42 /* FifteenAppUITestsLaunchTests.swift */; };
 		E41831D52F0BADAC00FF8C42 /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E41831D32F0BADAC00FF8C42 /* MyModel.xcdatamodeld */; };
 		E41831D92F0BBC2800FF8C42 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41831D82F0BBC2800FF8C42 /* DataController.swift */; };
+		E4538C2E2F923D3C00AE0EB3 /* JupyterNotebookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4538C2D2F923D3C00AE0EB3 /* JupyterNotebookView.swift */; };
 		E46B995A2F5BB6F800DDBA1C /* CoolVisualEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B99592F5BB6F800DDBA1C /* CoolVisualEffectsView.swift */; };
 		E46B995C2F5BCD4E00DDBA1C /* InteractiveTouchEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B995B2F5BCD4E00DDBA1C /* InteractiveTouchEffectsView.swift */; };
 		E46B995E2F5BFDDA00DDBA1C /* MetalEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B995D2F5BFDDA00DDBA1C /* MetalEffects.swift */; };
@@ -23,8 +24,24 @@
 		E46B99632F5C3FC400DDBA1C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46B99622F5C3FC400DDBA1C /* Metal.framework */; };
 		E46B99652F5C413A00DDBA1C /* TouchMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B99642F5C413A00DDBA1C /* TouchMetalView.swift */; };
 		E46B99672F5C447100DDBA1C /* TouchShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = E46B99662F5C447100DDBA1C /* TouchShader.metal */; };
+		E480D6062F87CEA3003BAAA1 /* RichNoteImportExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480D6052F87CEA3003BAAA1 /* RichNoteImportExportView.swift */; };
+		E480D6082F89CC68003BAAA1 /* SplitScreenNoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480D6072F89CC68003BAAA1 /* SplitScreenNoteEditorView.swift */; };
+		E480D60A2F8A0D6F003BAAA1 /* SplitScreenNoteAndWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480D6092F8A0D6E003BAAA1 /* SplitScreenNoteAndWebView.swift */; };
+		E480D60C2F8A57A6003BAAA1 /* InPlaceTextBlockEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480D60B2F8A57A6003BAAA1 /* InPlaceTextBlockEditorView.swift */; };
+		E480D60E2F8B299C003BAAA1 /* URLInputSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480D60D2F8B299C003BAAA1 /* URLInputSheet.swift */; };
+		E4B69F562FACCAA600E1530D /* SplitScreenNoteAndCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B69F552FACCAA500E1530D /* SplitScreenNoteAndCodeView.swift */; };
+		E4B69F582FAFFC1700E1530D /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B69F572FAFFC1700E1530D /* NoteDetailView.swift */; };
+		E4B69F5C2FB08ED800E1530D /* RichNoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B69F5B2FB08ED800E1530D /* RichNoteManager.swift */; };
 		E4BA5A222F78AD9400A10177 /* WebBrowserView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A212F78AD9400A10177 /* WebBrowserView2.swift */; };
 		E4BA5A242F78B3B500A10177 /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A232F78B3B500A10177 /* PhotoGalleryView.swift */; };
+		E4BA5A262F7A9E0F00A10177 /* RichNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A252F7A9E0F00A10177 /* RichNoteView.swift */; };
+		E4BA5A282F7FB03D00A10177 /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A272F7FB03D00A10177 /* PDFKitView.swift */; };
+		E4BA5A2A2F7FBE1A00A10177 /* SavedNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A292F7FBE1A00A10177 /* SavedNotesView.swift */; };
+		E4BA5A2C2F7FBECE00A10177 /* PDFViewerForNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A2B2F7FBECE00A10177 /* PDFViewerForNote.swift */; };
+		E4BA5A2E2F8099E200A10177 /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A2D2F8099E100A10177 /* EditNoteView.swift */; };
+		E4BA5A302F809BA200A10177 /* TextBlockEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A2F2F809BA200A10177 /* TextBlockEditorSheet.swift */; };
+		E4BA5A322F809C8200A10177 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5A312F809C8200A10177 /* ExtensionView.swift */; };
+		E4C335552F85C95E00B7A12B /* NoteBlockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C335542F85C95E00B7A12B /* NoteBlockDetailView.swift */; };
 		E4E824F02F74E12200B41666 /* WebBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E824EF2F74E12200B41666 /* WebBrowserView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +75,7 @@
 		E41831B42EFBD90700FF8C42 /* FifteenAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E41831D42F0BADAC00FF8C42 /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
 		E41831D82F0BBC2800FF8C42 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		E4538C2D2F923D3C00AE0EB3 /* JupyterNotebookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JupyterNotebookView.swift; sourceTree = "<group>"; };
 		E46B99592F5BB6F800DDBA1C /* CoolVisualEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolVisualEffectsView.swift; sourceTree = "<group>"; };
 		E46B995B2F5BCD4E00DDBA1C /* InteractiveTouchEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTouchEffectsView.swift; sourceTree = "<group>"; };
 		E46B995D2F5BFDDA00DDBA1C /* MetalEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalEffects.swift; sourceTree = "<group>"; };
@@ -65,8 +83,25 @@
 		E46B99622F5C3FC400DDBA1C /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		E46B99642F5C413A00DDBA1C /* TouchMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchMetalView.swift; sourceTree = "<group>"; };
 		E46B99662F5C447100DDBA1C /* TouchShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TouchShader.metal; sourceTree = "<group>"; };
+		E480D6052F87CEA3003BAAA1 /* RichNoteImportExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichNoteImportExportView.swift; sourceTree = "<group>"; };
+		E480D6072F89CC68003BAAA1 /* SplitScreenNoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitScreenNoteEditorView.swift; sourceTree = "<group>"; };
+		E480D6092F8A0D6E003BAAA1 /* SplitScreenNoteAndWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitScreenNoteAndWebView.swift; sourceTree = "<group>"; };
+		E480D60B2F8A57A6003BAAA1 /* InPlaceTextBlockEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPlaceTextBlockEditorView.swift; sourceTree = "<group>"; };
+		E480D60D2F8B299C003BAAA1 /* URLInputSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLInputSheet.swift; sourceTree = "<group>"; };
+		E4B69F552FACCAA500E1530D /* SplitScreenNoteAndCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitScreenNoteAndCodeView.swift; sourceTree = "<group>"; };
+		E4B69F572FAFFC1700E1530D /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		E4B69F5B2FB08ED800E1530D /* RichNoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichNoteManager.swift; sourceTree = "<group>"; };
+		E4B69F5E2FB094FD00E1530D /* FifteenApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FifteenApp.entitlements; sourceTree = "<group>"; };
 		E4BA5A212F78AD9400A10177 /* WebBrowserView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserView2.swift; sourceTree = "<group>"; };
 		E4BA5A232F78B3B500A10177 /* PhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
+		E4BA5A252F7A9E0F00A10177 /* RichNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichNoteView.swift; sourceTree = "<group>"; };
+		E4BA5A272F7FB03D00A10177 /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
+		E4BA5A292F7FBE1A00A10177 /* SavedNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNotesView.swift; sourceTree = "<group>"; };
+		E4BA5A2B2F7FBECE00A10177 /* PDFViewerForNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerForNote.swift; sourceTree = "<group>"; };
+		E4BA5A2D2F8099E100A10177 /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
+		E4BA5A2F2F809BA200A10177 /* TextBlockEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlockEditorSheet.swift; sourceTree = "<group>"; };
+		E4BA5A312F809C8200A10177 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		E4C335542F85C95E00B7A12B /* NoteBlockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBlockDetailView.swift; sourceTree = "<group>"; };
 		E4E824EF2F74E12200B41666 /* WebBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,10 +156,12 @@
 		E41831962EFBD90300FF8C42 /* FifteenApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4B69F5E2FB094FD00E1530D /* FifteenApp.entitlements */,
 				E41831972EFBD90300FF8C42 /* FifteenAppApp.swift */,
 				E46B99592F5BB6F800DDBA1C /* CoolVisualEffectsView.swift */,
 				E41831D82F0BBC2800FF8C42 /* DataController.swift */,
 				E41831992EFBD90300FF8C42 /* ContentView.swift */,
+				E480D6072F89CC68003BAAA1 /* SplitScreenNoteEditorView.swift */,
 				E418319B2EFBD90600FF8C42 /* Assets.xcassets */,
 				E418319D2EFBD90600FF8C42 /* Preview Content */,
 				E46B995B2F5BCD4E00DDBA1C /* InteractiveTouchEffectsView.swift */,
@@ -135,6 +172,22 @@
 				E4E824EF2F74E12200B41666 /* WebBrowserView.swift */,
 				E4BA5A212F78AD9400A10177 /* WebBrowserView2.swift */,
 				E4BA5A232F78B3B500A10177 /* PhotoGalleryView.swift */,
+				E4BA5A252F7A9E0F00A10177 /* RichNoteView.swift */,
+				E480D6052F87CEA3003BAAA1 /* RichNoteImportExportView.swift */,
+				E4BA5A272F7FB03D00A10177 /* PDFKitView.swift */,
+				E4BA5A292F7FBE1A00A10177 /* SavedNotesView.swift */,
+				E4B69F572FAFFC1700E1530D /* NoteDetailView.swift */,
+				E4BA5A2B2F7FBECE00A10177 /* PDFViewerForNote.swift */,
+				E4BA5A2D2F8099E100A10177 /* EditNoteView.swift */,
+				E4BA5A2F2F809BA200A10177 /* TextBlockEditorSheet.swift */,
+				E4BA5A312F809C8200A10177 /* ExtensionView.swift */,
+				E4C335542F85C95E00B7A12B /* NoteBlockDetailView.swift */,
+				E480D6092F8A0D6E003BAAA1 /* SplitScreenNoteAndWebView.swift */,
+				E4538C2D2F923D3C00AE0EB3 /* JupyterNotebookView.swift */,
+				E480D60D2F8B299C003BAAA1 /* URLInputSheet.swift */,
+				E480D60B2F8A57A6003BAAA1 /* InPlaceTextBlockEditorView.swift */,
+				E4B69F552FACCAA500E1530D /* SplitScreenNoteAndCodeView.swift */,
+				E4B69F5B2FB08ED800E1530D /* RichNoteManager.swift */,
 			);
 			path = FifteenApp;
 			sourceTree = "<group>";
@@ -302,19 +355,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B69F562FACCAA600E1530D /* SplitScreenNoteAndCodeView.swift in Sources */,
+				E4B69F5C2FB08ED800E1530D /* RichNoteManager.swift in Sources */,
+				E480D60A2F8A0D6F003BAAA1 /* SplitScreenNoteAndWebView.swift in Sources */,
+				E4C335552F85C95E00B7A12B /* NoteBlockDetailView.swift in Sources */,
+				E4538C2E2F923D3C00AE0EB3 /* JupyterNotebookView.swift in Sources */,
+				E480D60E2F8B299C003BAAA1 /* URLInputSheet.swift in Sources */,
+				E4B69F582FAFFC1700E1530D /* NoteDetailView.swift in Sources */,
 				E46B99672F5C447100DDBA1C /* TouchShader.metal in Sources */,
+				E4BA5A302F809BA200A10177 /* TextBlockEditorSheet.swift in Sources */,
+				E480D6062F87CEA3003BAAA1 /* RichNoteImportExportView.swift in Sources */,
+				E480D6082F89CC68003BAAA1 /* SplitScreenNoteEditorView.swift in Sources */,
 				E4E824F02F74E12200B41666 /* WebBrowserView.swift in Sources */,
 				E4BA5A242F78B3B500A10177 /* PhotoGalleryView.swift in Sources */,
+				E4BA5A2C2F7FBECE00A10177 /* PDFViewerForNote.swift in Sources */,
+				E4BA5A282F7FB03D00A10177 /* PDFKitView.swift in Sources */,
+				E4BA5A322F809C8200A10177 /* ExtensionView.swift in Sources */,
 				E46B99602F5C29A900DDBA1C /* Shaders.metal in Sources */,
 				E46B995E2F5BFDDA00DDBA1C /* MetalEffects.swift in Sources */,
+				E4BA5A2A2F7FBE1A00A10177 /* SavedNotesView.swift in Sources */,
 				E418319A2EFBD90300FF8C42 /* ContentView.swift in Sources */,
 				E46B99652F5C413A00DDBA1C /* TouchMetalView.swift in Sources */,
+				E4BA5A2E2F8099E200A10177 /* EditNoteView.swift in Sources */,
 				E41831D92F0BBC2800FF8C42 /* DataController.swift in Sources */,
+				E480D60C2F8A57A6003BAAA1 /* InPlaceTextBlockEditorView.swift in Sources */,
 				E4BA5A222F78AD9400A10177 /* WebBrowserView2.swift in Sources */,
 				E46B995C2F5BCD4E00DDBA1C /* InteractiveTouchEffectsView.swift in Sources */,
 				E41831982EFBD90300FF8C42 /* FifteenAppApp.swift in Sources */,
 				E46B995A2F5BB6F800DDBA1C /* CoolVisualEffectsView.swift in Sources */,
 				E41831D52F0BADAC00FF8C42 /* MyModel.xcdatamodeld in Sources */,
+				E4BA5A262F7A9E0F00A10177 /* RichNoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +545,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FifteenApp/FifteenApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FifteenApp/Preview Content\"";
 				DEVELOPMENT_TEAM = TJD2YHR26K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FifteenApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -505,12 +577,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FifteenApp/FifteenApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FifteenApp/Preview Content\"";
 				DEVELOPMENT_TEAM = TJD2YHR26K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FifteenApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

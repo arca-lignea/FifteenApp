@@ -12,6 +12,7 @@ struct PhotoGalleryView: View {
     @State private var showPhotoViewer = false
     @State private var showPDFViewer = false
     @State private var activeTab: GalleryTab = .photos
+    @State private var isAddingPDF = false
     @StateObject private var photoManager = PhotoManager()
     
     enum GalleryTab {
@@ -41,14 +42,17 @@ struct PhotoGalleryView: View {
                                     .foregroundColor(.blue)
                             }
                         } else {
-                            Button(action: { selectedPDFURL = nil }) {
+                            Button(action: {
+                                selectedPDFURL = nil
+                                isAddingPDF = true
+                            }) {
                                 Image(systemName: "plus.circle.fill")
                                     .font(.system(size: 24))
                                     .foregroundColor(.blue)
                             }
                             .fileImporter(
                                 isPresented: Binding(
-                                    get: { selectedPDFURL == nil },
+                                    get: { selectedPDFURL == nil && isAddingPDF },
                                     set: { _ in }
                                 ),
                                 allowedContentTypes: [.pdf],
@@ -71,7 +75,10 @@ struct PhotoGalleryView: View {
                     
                     // Tab Selector
                     HStack(spacing: 0) {
-                        Button(action: { activeTab = .photos }) {
+                        Button(action: { 
+                            activeTab = .photos
+                            isAddingPDF = false
+                        }) {
                             VStack(spacing: 4) {
                                 Image(systemName: "photo.fill")
                                     .font(.system(size: 16))
@@ -591,43 +598,7 @@ struct PDFViewerSheet: View {
 }
 
 // MARK: - PDFKit Wrapper
-struct PDFKitView: UIViewRepresentable {
-    let pdfData: Data
-    @Binding var currentPage: Int
-    
-    func makeUIView(context: Context) -> PDFView {
-        let pdfView = PDFView()
-        pdfView.document = PDFDocument(data: pdfData)
-        pdfView.autoScales = true
-        pdfView.displayMode = .singlePageContinuous
-        pdfView.delegate = context.coordinator
-        return pdfView
-    }
-    
-    func updateUIView(_ uiView: PDFView, context: Context) {
-        // Update handled through delegate
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(currentPage: $currentPage)
-    }
-    
-    class Coordinator: NSObject, PDFViewDelegate {
-        @Binding var currentPage: Int
-        
-        init(currentPage: Binding<Int>) {
-            self._currentPage = currentPage
-        }
-        
-        func pdfViewPageChanged(_ notification: Notification) {
-            if let pdfView = notification.object as? PDFView,
-               let document = pdfView.document,
-               let currentPage = pdfView.currentPage {
-                self.currentPage = (document.index(for: currentPage) ?? 0) + 1
-            }
-        }
-    }
-}
+
 
 // MARK: - Photo Model
 struct GalleryPhoto: Identifiable, Codable {

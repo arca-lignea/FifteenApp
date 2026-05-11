@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "33ED0598-422A-433B-B4F3-C29976A1389D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09C0606A-547C-4992-917F-3C9C0F355973"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FifteenApp/PhotoGalleryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8771C49-7CE9-4FA2-A4D8-46E7CEC0CCC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FifteenApp/SplitScreenNoteAndWebView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "668"
+            endingLineNumber = "668"
+            landmarkName = "saveNote()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8771C49-7CE9-4FA2-A4D8-46E7CEC0CCC6 - fcf0c24d53e7d300"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FifteenApp.SplitScreenNoteAndWebView.saveNote() -&gt; ()"
+                  moduleName = "FifteenApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sophie/Downloads/greg/coding/xcode/FifteenApp/FifteenApp/SplitScreenNoteAndWebView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "667"
+                  endingLineNumber = "667"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "B8771C49-7CE9-4FA2-A4D8-46E7CEC0CCC6 - fcf0c24d53e7d35f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FifteenApp.SplitScreenNoteAndWebView.saveNote() -&gt; ()"
+                  moduleName = "FifteenApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sophie/Downloads/greg/coding/xcode/FifteenApp/FifteenApp/SplitScreenNoteAndWebView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "668"
+                  endingLineNumber = "668"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

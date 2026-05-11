@@ -20,31 +20,33 @@ struct ContentView: View {
                 
                 // 2. Use a NavigationLink to the destination view
                 
-                NavigationLink(destination: AddSubjectView()) {
-                    Text("Add Subject")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
-                NavigationLink(destination: ViewSubjects()) {
-                    Text("View Subjects")
+                NavigationLink(destination: JupyterNotebookView()) {
+                    Text("View Jupyter Notebook")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
 
-                NavigationLink(destination: WebBrowserView2()) {
-                    Text("Web Browser")
+                
+                NavigationLink(destination: RichNoteView()) {
+                    Text("Add Rich Note")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
                 
-                NavigationLink(destination: PhotoGalleryView()) {
-                    Text("Images")
+                NavigationLink(destination: SavedNotesView()) {
+                    Text("View Saved Note")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                
+                NavigationLink(destination: RichNoteImportExportView()) {
+                    Text("Import/Export Note")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)

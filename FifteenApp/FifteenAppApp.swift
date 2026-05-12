@@ -14,7 +14,7 @@ struct FifteenAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RichNotesListView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
 
         }

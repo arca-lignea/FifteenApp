@@ -51,7 +51,7 @@ struct SavedNotesView: View {
     }
     
     var body: some View {
-
+        NavigationStack {
             ZStack {
                 VStack(spacing: 0) {
                     // Header
@@ -142,33 +142,45 @@ struct SavedNotesView: View {
                     } else {
                         List {
                             ForEach(filteredAndSortedNotes) { note in
-                                NavigationLink(destination: NoteDetailView(note: note, noteManager: noteManager)) {
-                                    SavedNoteRowView(note: note)
-                                }
-                                .contextMenu {
-                                    Button {
-                                        selectedNote = note
-                                        showNoteViewer = true
-                                    } label: {
-                                        Label("View", systemImage: "eye")
-                                    }
-                                    
-                                    Button {
-                                        UIPasteboard.general.string = note.title + "\n\n" + extractAllText(from: note)
-                                    } label: {
-                                        Label("Copy All Text", systemImage: "doc.on.doc")
-                                    }
-                                    
-                                    Button(role: .destructive) {
-                                        deleteNote(note)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash")
+                                Section
+                                {
+                                    VStack {
+                                        NavigationLink(value: NavigationDestinationEnum.noteDetail(note) )
+                                        {
+                                            //SavedNoteRowView(note: note)
+                                            
+                                        }
                                     }
                                 }
+//                                .contextMenu {
+//                                    Button {
+//                                        selectedNote = note
+//                                        showNoteViewer = true
+//                                    } label: {
+//                                        Label("View", systemImage: "eye")
+//                                    }
+//                                    
+//                                    Button {
+//                                        UIPasteboard.general.string = note.title + "\n\n" + extractAllText(from: note)
+//                                    } label: {
+//                                        Label("Copy All Text", systemImage: "doc.on.doc")
+//                                    }
+//                                    
+//                                    Button(role: .destructive) {
+//                                        deleteNote(note)
+//                                    } label: {
+//                                        Label("Delete", systemImage: "trash")
+//                                    }
+//                                }
                             }
                         }
                         .listStyle(PlainListStyle())
                     }
+                }
+            }
+            .navigationDestination(for: NavigationDestinationEnum.self) { destination in
+                if case .noteDetail(let note) = destination {
+                        NoteDetailView(note: note, noteManager: noteManager)
                 }
             }
             .onAppear {
@@ -180,7 +192,7 @@ struct SavedNotesView: View {
                 }
             }
             .toolbar(.hidden, for: .navigationBar)
-        
+        }
     }
     
     private func refreshNotes() {
@@ -204,6 +216,7 @@ struct SavedNotesView: View {
         return text
     }
 }
+
 
 // MARK: - Saved Note Row View
 struct SavedNoteRowView: View {

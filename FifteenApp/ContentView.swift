@@ -8,11 +8,54 @@
 import SwiftUI
 import CoreData
 
+enum NavigationDestinationEnum: Hashable {
+    // Main App Navigation
+    case jupyterNotebook
+    case richNote
+    case savedNotes
+    case importExport
+    case deleteAll
+    
+    // Note Detail Navigation
+    case noteDetail(RichNote)
+    
+    func hash(into hasher: inout Hasher) {
+        switch self {
+        case .jupyterNotebook:
+            hasher.combine("jupyterNotebook")
+        case .richNote:
+            hasher.combine("richNote")
+        case .savedNotes:
+            hasher.combine("savedNotes")
+        case .importExport:
+            hasher.combine("importExport")
+        case .deleteAll:
+            hasher.combine("deleteAll")
+        case .noteDetail(let note):
+            hasher.combine(note.id)
+        }
+    }
+    
+    static func == (lhs: NavigationDestinationEnum, rhs: NavigationDestinationEnum) -> Bool {
+        switch (lhs, rhs) {
+        case (.jupyterNotebook, .jupyterNotebook),
+             (.richNote, .richNote),
+             (.savedNotes, .savedNotes),
+             (.importExport, .importExport),
+             (.deleteAll, .deleteAll):
+            return true
+        case (.noteDetail(let note1), .noteDetail(let note2)):
+            return note1.id == note2.id
+        default:
+            return false
+        }
+    }
+}
 
 struct ContentView: View {
     
     var body: some View {
-        NavigationView
+        NavigationStack
         {
             VStack {
                 //    Text("Learn")
@@ -20,7 +63,8 @@ struct ContentView: View {
                 
                 // 2. Use a NavigationLink to the destination view
                 
-                NavigationLink(destination: JupyterNotebookView()) {
+
+                NavigationLink(value: NavigationDestinationEnum.jupyterNotebook) {
                     Text("View Jupyter Notebook")
                         .padding()
                         .background(Color.blue)
@@ -29,7 +73,7 @@ struct ContentView: View {
                 }
 
                 
-                NavigationLink(destination: RichNoteView()) {
+                NavigationLink(value: NavigationDestinationEnum.richNote) {
                     Text("Add Rich Note")
                         .padding()
                         .background(Color.blue)
@@ -37,7 +81,7 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
                 
-                NavigationLink(destination: SavedNotesView()) {
+                NavigationLink(value: NavigationDestinationEnum.savedNotes) {
                     Text("View Saved Note")
                         .padding()
                         .background(Color.blue)
@@ -45,7 +89,7 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
                 
-                NavigationLink(destination: RichNoteImportExportView()) {
+                NavigationLink(value: NavigationDestinationEnum.importExport) {
                     Text("Import/Export Note")
                         .padding()
                         .background(Color.blue)
@@ -54,7 +98,8 @@ struct ContentView: View {
                 }
 
                 Spacer()
-                NavigationLink(destination: DeleteAll()) {
+                
+                NavigationLink(value: NavigationDestinationEnum.deleteAll) {
                     Text("Remove All")
                         .padding()
                 }
@@ -62,6 +107,22 @@ struct ContentView: View {
                 Spacer()
             }
             .padding()
+            .navigationDestination(for: NavigationDestinationEnum.self) { destination in
+                            switch destination {
+                            case .jupyterNotebook:
+                                JupyterNotebookView()
+                            case .richNote:
+                                RichNoteView()
+                            case .savedNotes:
+                                SavedNotesView()
+                            case .importExport:
+                                RichNoteImportExportView()
+                            case .deleteAll:
+                                DeleteAll()
+                            case .noteDetail(_):
+                                VStack { }
+                            }
+                        }
         }
     }
 }
@@ -235,6 +296,7 @@ struct ViewSubject : View {
         }
     }
 }
+
 
 struct DeleteAll : View {
 

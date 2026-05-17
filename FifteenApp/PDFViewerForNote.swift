@@ -7,25 +7,21 @@
 
 import SwiftUI
 
-// MARK: - PDF Viewer for Note
+// MARK: - PDF Viewer
 struct PDFViewerForNote: View {
     let pdfData: Data
     let filename: String
     @Environment(\.dismiss) var dismiss
-    
     @State var currentPage: Int
     
     var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-            
-            VStack(spacing: 0) {
-                // Header
+        NavigationStack {
+            VStack {
                 HStack {
                     Button(action: { dismiss() }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 24))
-                            .foregroundColor(.white)
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(.blue)
                     }
                     
                     Spacer()
@@ -41,20 +37,14 @@ struct PDFViewerForNote: View {
                     }
                     
                     Spacer()
-                    
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 24))
-                            .foregroundColor(.white)
-                    }
                 }
                 .padding(16)
-                .background(Color.black.opacity(0.7))
+                .background(Color(.systemGray6))
                 
-                // PDF View
                 PDFKitView(pdfData: pdfData, currentPage: $currentPage)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 }

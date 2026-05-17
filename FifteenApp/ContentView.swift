@@ -110,7 +110,7 @@ struct ContentView: View {
             .navigationDestination(for: NavigationDestinationEnum.self) { destination in
                             switch destination {
                             case .jupyterNotebook:
-                                JupyterNotebookView()
+                                Text("B") //JupyterNotebookView()
                             case .richNote:
                                 RichNoteView()
                             case .savedNotes:

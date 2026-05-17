@@ -3,6 +3,7 @@ import PDFKit
 
 struct SplitScreenNoteEditorView: View {
     let originalNote: RichNote
+    let pdfPageNumbersCopy: [UUID: Int] // compare with this to detect if page numbers have changed
     @State private var editingNote: RichNote
     @State private var selectedTextBlockId: UUID?
     @State private var selectedPDFBlockId: UUID?
@@ -27,14 +28,17 @@ struct SplitScreenNoteEditorView: View {
             }
         }
         self._pdfPageNumbers = State(initialValue: initialPageNumbers)
+        self.pdfPageNumbersCopy = initialPageNumbers
+    
     }
     
     var hasChanges: Bool {
         let titleChanged = editingNote.title != originalNote.title
         let blockCountChanged = editingNote.blocks.count != originalNote.blocks.count
         let blocksChanged = !blocksAreEqual()
-        
-        return titleChanged || blockCountChanged || blocksChanged
+        let pageNumbersChanged = (pdfPageNumbers != pdfPageNumbersCopy)
+        //print(pageNumbersChanged)
+        return titleChanged || blockCountChanged || blocksChanged || pageNumbersChanged
     }
     
     private func blocksAreEqual() -> Bool {
@@ -54,6 +58,7 @@ struct SplitScreenNoteEditorView: View {
         
         return true
     }
+    
     
     var body: some View {
         if horizontalSizeClass == .regular {

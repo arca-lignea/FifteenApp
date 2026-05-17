@@ -14,6 +14,11 @@ enum RichNotesListNavigation: Hashable {
     case addNote
     case importExportNote
     case editNote(RichNote)
+    case basicEditor(RichNote)
+    case splitScreen(RichNote)
+    case noteAndWeb(RichNote)
+    case noteAndCode(RichNote)
+    case noteAndNotebook(RichNote)
     
     func hash(into hasher: inout Hasher) {
         switch self {
@@ -25,7 +30,18 @@ enum RichNotesListNavigation: Hashable {
             hasher.combine("importExportNote")
         case .editNote(let note):
             hasher.combine(note.id)
+        case .basicEditor(let note):
+            hasher.combine(note.id)
+        case .splitScreen(let note):
+            hasher.combine(note.id)
+        case .noteAndWeb(let note):
+            hasher.combine(note.id)
+        case .noteAndCode(let note):
+            hasher.combine(note.id)
+        case .noteAndNotebook(let note):
+            hasher.combine(note.id)
         }
+        
     }
     
     static func == (lhs: RichNotesListNavigation, rhs: RichNotesListNavigation) -> Bool {
@@ -37,6 +53,16 @@ enum RichNotesListNavigation: Hashable {
         case (.importExportNote, .importExportNote):
             return true
         case (.editNote(let note1), .editNote(let note2)):
+            return note1.id == note2.id
+        case (.basicEditor(let note1), .basicEditor(let note2)):
+            return note1.id == note2.id
+        case (.splitScreen(let note1), .splitScreen(let note2)):
+            return note1.id == note2.id
+        case (.noteAndWeb(let note1), .noteAndWeb(let note2)):
+            return note1.id == note2.id
+        case (.noteAndCode(let note1), .noteAndCode(let note2)):
+            return note1.id == note2.id
+        case (.noteAndNotebook(let note1), .noteAndNotebook(let note2)):
             return note1.id == note2.id
         default:
             return false
@@ -267,6 +293,16 @@ struct RichNotesListView: View {
                     EditNoteView(note: note)
                 case .importExportNote:
                     RichNoteImportExportView()
+                case .basicEditor(let note):
+                    EditNoteView(note: note)
+                case .splitScreen(let note):
+                    SplitScreenNoteEditorView(note: note)
+                case .noteAndWeb(let note):
+                    SplitScreenNoteAndWebView(note: note)
+                case .noteAndCode(let note):
+                    SplitScreenNoteAndCodeView(note: note)
+                case .noteAndNotebook(let note):
+                    JupyterNotebookView()
                 }
             }
             .onAppear {

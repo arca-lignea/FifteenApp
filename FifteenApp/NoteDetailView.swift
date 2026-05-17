@@ -35,7 +35,7 @@ struct NoteDetailView: View {
     }
     
     var body: some View {
-        NavigationView {
+
             ZStack {
                 VStack(spacing: 0) {
                     // Header
@@ -48,36 +48,32 @@ struct NoteDetailView: View {
                         
                         Spacer()
                         
-                        NavigationLink(destination: EditNoteView(note: editedNote))
+                        Menu
                         {
-                            Image(systemName: "pencil.circle")
-                                    .font(.system(size: 24))
-                                    .foregroundColor(.blue)
+                            NavigationLink(value: RichNotesListNavigation.basicEditor( editedNote)) {
+                                Label("Basic Editor", systemImage: "pencil.circle")
+                            }
                             
-                        }
+                            NavigationLink(value: RichNotesListNavigation.splitScreen( editedNote)) {
+                                Label("Split Screen", systemImage: "square.split.2x1")
+                            }
+
+                            NavigationLink(value: RichNotesListNavigation.noteAndWeb( editedNote)) {
+                                Label("Note + Web", systemImage: "globe")
+                            }
+
+                            NavigationLink(value: RichNotesListNavigation.noteAndCode( editedNote)) {
+                                Label("Note + Code", systemImage: "curlybraces")
+                            }
+                            
+                            NavigationLink(value: RichNotesListNavigation.noteAndNotebook( editedNote)) {
+                                Label("Note + Notebook", systemImage: "book")
+                            }
                         
-                        NavigationLink(destination: SplitScreenNoteEditorView(note: editedNote))
-                        {
+                        } label: {
                             Image(systemName: "pencil.circle")
-                                    .font(.system(size: 24))
-                                    .foregroundColor(.red)
-                            
-                        }
-                        
-                        NavigationLink(destination: SplitScreenNoteAndWebView(note: editedNote))
-                        {
-                            Image(systemName: "pencil.circle")
-                                    .font(.system(size: 24))
-                                    .foregroundColor(.yellow)
-                            
-                        }
-                        
-                        NavigationLink(destination: SplitScreenNoteAndCodeView(note: editedNote))
-                        {
-                            Image(systemName: "pencil.circle")
-                                    .font(.system(size: 24))
-                                    .foregroundColor(.pink)
-                            
+                                .font(.system(size: 24))
+                                .foregroundColor(.blue)
                         }
                         
                     }
@@ -184,7 +180,7 @@ struct NoteDetailView: View {
                 //    EditNoteView(note: editedNote).transition(.move(edge: .bottom))
                 //}
             }
-        }
+        
         .toolbar(.hidden, for: .navigationBar)
     }
     
